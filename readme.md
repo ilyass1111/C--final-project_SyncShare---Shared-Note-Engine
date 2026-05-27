@@ -1,5 +1,3 @@
-readme_content = """# SyncShare: Shared Note Engine
-
 A bidirectional, file-based shared note synchronization system with a GUI, command-line management controller, and real-time data persistence.
 
 ## Project Overview
