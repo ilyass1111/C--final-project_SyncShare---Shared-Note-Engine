@@ -40,5 +40,4 @@ For full project details and design specifications, please refer to the `Project
 ![Language](https://img.shields.io/badge/Language-C++-blue.svg)
 ![Build](https://img.shields.io/badge/Framework-FLTK-green.svg)
 
-with open("README.md", "w") as f:
-    f.write(readme_content)
+
