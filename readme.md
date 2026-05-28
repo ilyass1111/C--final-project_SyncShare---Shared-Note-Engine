@@ -1,43 +1,36 @@
-A bidirectional, file-based shared note synchronization system with a GUI, command-line management controller, and real-time data persistence.
+# SyncShare: Shared Note Engine
+
+![Language](https://img.shields.io/badge/Language-C++-blue.svg)
+![Build](https://img.shields.io/badge/Framework-FLTK-green.svg)
+
+A robust, C++-based shared note synchronization system featuring a bidirectional GUI, a command-line management controller, and professional memory management.
 
 ## Project Overview
-SyncShare allows multiple instances of the application to interact with a shared `notes.txt` database. Built for efficiency and security, it strictly adheres to a "no-runtime-input" policy, utilizing a robust CLI controller to manage data.
+SyncShare allows multiple instances of the application to interact with a shared `notes.txt` database. Designed with a modular architecture, the system utilizes **Inheritance**, **Smart Pointers**, and **Operator Overloading** to ensure memory safety, type extensibility, and maintainable code.
 
-## Features
-* **Bidirectional Sync:** Real-time note updates using automated file polling.
-* **CLI Controller:** Manage your database without opening the GUI.
-* **Inheritance-based Architecture:** Implements `BaseNote` and `SecureNote` classes.
-* **Extra Features:** Includes template functions for logging, smart memory management, and advanced command-line parsing.
+## Key Technical Features
+* **Memory Safety:** Implements `std::unique_ptr` for professional resource management.
+* **OOP Architecture:** Features class inheritance (`BaseNote`, `SecureNote`) and template-based logging.
+* **Operator Overloading:** Streamlined object output using the overloaded `<<` operator for easy data debugging.
+* **Bidirectional Sync:** Real-time GUI updates using automated file polling.
+* **CLI Controller:** Powerful maintenance commands (Import/Export/Delete/Stats) designed to adhere to a "no-runtime-input" policy.
 
 ## Commands
 | Command | Description |
 | :--- | :--- |
 | `./main start` | Launches the graphical user interface. |
-| `./main stats` | Displays the total number of notes. |
-| `./main import <file>` | Performs bulk note import from a `.txt` file. |
-| `./main export` | Exports all notes to the console. |
-| `./main delete <title>` | Removes a note by its title. |
+| `./main stats` | Displays the total number of notes currently stored. |
+| `./main import <file>` | Performs bulk note import from a specified `.txt` file. |
+| `./main export` | Exports all current notes to the console. |
+| `./main delete <title>` | Removes a specific note by its title from the database. |
 
 ## Technical Stack
-* **Language:** C++
-* **GUI Framework:** FLTK
-* **Data Storage:** Local `.txt` file (source of truth)
+* **Language:** C++ (Standard C++11/17)
+* **GUI Framework:** FLTK (Fast Light Toolkit)
+* **Data Persistence:** Persistent local `.txt` file (Source of Truth)
 * **Build System:** `fltk-config`
 
 ## Installation & Usage
-1.  **Compile:**
-    ```bash
-    fltk-config --compile main.cpp
-    ```
-2.  **Run:**
-    Ensure `notes.txt` exists in the folder, then use the commands listed above.
-
-## Documentation
-For full project details and design specifications, please refer to the `Project_Planning_v2.pdf`.
-"""
-# SyncShare
-
-![Language](https://img.shields.io/badge/Language-C++-blue.svg)
-![Build](https://img.shields.io/badge/Framework-FLTK-green.svg)
-
-
+1. **Compile:**
+   ```bash
+   fltk-config --compile main.cpp
